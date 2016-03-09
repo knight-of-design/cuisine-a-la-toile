@@ -924,3 +924,29 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/* Cuisine a la Toile Styling */
+#page {
+	text-align: center;
+	width: 100%;
+}
+
+#content {
+	max-width: 960px;
+	width: 100%;
+	display: inline-block;
+}
+
+#primary {
+	display: inline-block;
+	max-width: 700px;
+	width: 100%;
+	vertical-align: top;
+}
+
+#secondary {
+	display: inline-block;
+	max-width: 240px;
+	width: 100%;
+	vertical-align: top;
+}
