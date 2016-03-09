@@ -929,6 +929,7 @@ object {
 #page {
 	text-align: center;
 	width: 100%;
+	position: relative; /* fixes wp .admin-bar */
 }
 
 #content {
