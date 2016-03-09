@@ -952,8 +952,13 @@ object {
 	vertical-align: top;
 }
 
+.site-header {
+	padding-top: 32px;
+}
+
 .main-navigation {
     position: absolute;
     top: 0;
     background: #AAA;
+		height: 32px;
 }
