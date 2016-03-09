@@ -16,6 +16,11 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+
+		<video controls>
+		<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
+		</video>
+
 		<main id="main" class="site-main" role="main">
 
 		<?php
