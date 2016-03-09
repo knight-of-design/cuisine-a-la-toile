@@ -950,3 +950,9 @@ object {
 	width: 100%;
 	vertical-align: top;
 }
+
+.main-navigation {
+    position: absolute;
+    top: 0;
+    background: #AAA;
+}
