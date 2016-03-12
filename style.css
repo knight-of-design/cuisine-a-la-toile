@@ -45,7 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: 'Muli', 'Arial' sans-serif;
+	font-family: 'Muli', 'Arial', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -164,7 +164,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: 'Muli', 'Arial' sans-serif;
+	font-family: 'Muli', 'Arial', sans-serif;
 	font-size: 1em;
 }
 
@@ -269,7 +269,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: 'Muli', 'Arial' sans-serif;
+	font-family: 'Muli', 'Arial', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -305,7 +305,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: 'Muli', 'Arial' sans-serif;
+	font-family: 'Muli', 'Arial', sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -319,7 +319,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: 'Muli', 'Arial' sans-serif;
+	font-family: 'Muli', 'Arial', sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -932,18 +932,19 @@ object {
 }
 
 .site-header {
-	padding-top: 30px;
+	padding-top: 138px;
 }
 
 .main-navigation {
-    position: absolute;
+    position: fixed;
+		z-index: 2000;
     top: 0;
     background: HSL(60, 100%, 95%);
 		height: 170px;
 		border-top: 10px solid HSL(0, 100%, 25%);
 }
 
-.main-navigation .nav-menu a:visited, 
+.main-navigation .nav-menu a:visited,
 .main-navigation .nav-menu a:focus,
 .main-navigation .nav-menu a:active {
 	color: HSL(210, 100%, 20%);

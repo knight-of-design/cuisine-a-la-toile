@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<video id="landing-background" autoplay>
+<video id="landing-background" autoplay loop muted>
 	<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
 </video>
 
