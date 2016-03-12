@@ -943,10 +943,7 @@ object {
 		border-top: 10px solid HSL(0, 100%, 25%);
 }
 
-.main-navigation .nav-menu a:visited {
-	color: inherit;
-}
-
+.main-navigation .nav-menu a:visited, 
 .main-navigation .nav-menu a:focus,
 .main-navigation .nav-menu a:active {
 	color: HSL(210, 100%, 20%);
