@@ -963,8 +963,17 @@ object {
 		height: 32px;
 }
 
+
 video#landing-background {
 	position: absolute;
 	left: 0;
 	width: 100%;
+}
+
+.site-footer {
+	background-color: #036;
+	text-align: center;
+	height: 100px;
+	color:white;
+
 }
