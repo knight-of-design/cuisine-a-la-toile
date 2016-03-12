@@ -150,3 +150,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Adds a custom Google font. 
+function wpb_add_google_fonts() {
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Parisienne|Muli', false );
+}
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
