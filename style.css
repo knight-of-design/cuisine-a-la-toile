@@ -939,7 +939,7 @@ object {
     position: absolute;
     top: 0;
     background: HSL(60, 100%, 95%);
-		height: 80px;
+		height: 170px;
 		border-top: 10px solid HSL(0, 100%, 25%);
 }
 
@@ -956,12 +956,17 @@ object {
 	color: HSL(210, 100%, 40%);
 }
 .main-navigation .logo{
-width: 300px;
-display: inline-block;
+	width: 300px;
+	display: inline-block;
+	position: absolute;
+	left: 50px;
 }
+
 #primary-menu{
 display: inline-block;
   vertical-align: top;
+	margin-top: 50px;
+	margin-left: 50%;
 }
 .nav-menu {
 	margin: 20px;
@@ -973,6 +978,7 @@ video#landing-background {
 	position: absolute;
 	left: 0;
 	width: 100%;
+	z-index: -1;
 }
 
 .site-footer {
