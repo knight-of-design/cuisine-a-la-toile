@@ -15,11 +15,11 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<video id="landing-background" autoplay>
+	<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
+</video>
 
-		<video controls>
-		<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
-		</video>
+	<div id="primary" class="content-area">
 
 		<main id="main" class="site-main" role="main">
 

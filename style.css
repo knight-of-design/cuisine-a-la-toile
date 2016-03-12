@@ -962,3 +962,9 @@ object {
     background: #AAA;
 		height: 32px;
 }
+
+video#landing-background {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
