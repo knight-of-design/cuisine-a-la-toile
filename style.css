@@ -966,4 +966,5 @@ object {
 .site-footer {
 	background-color: #036;
 	text-align: center;
+	height: 100px;
 }
