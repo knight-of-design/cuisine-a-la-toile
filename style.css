@@ -530,17 +530,20 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: HSL(210, 100%, 20%);
 }
 
 a:visited {
-	color: purple;
+	color: HSL(210, 100%, 40%);
 }
 
-a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: HSL(210, 100%, 20%);
+}
+
+a:hover {
+	color: HSL(210, 100%, 40%);
 }
 
 a:focus {
@@ -558,7 +561,6 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 }
 
@@ -570,13 +572,15 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+	display: inline-block;
 	position: relative;
+	padding: inherit;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	font-weight: bolder;
 }
 
 .main-navigation ul ul {
@@ -597,22 +601,6 @@ a:active {
 	width: 200px;
 }
 
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
@@ -621,12 +609,6 @@ a:active {
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
 }
 
 /* Small menu. */
@@ -953,14 +935,34 @@ object {
 }
 
 .site-header {
-	padding-top: 32px;
+	padding-top: 30px;
 }
 
 .main-navigation {
     position: absolute;
     top: 0;
-    background: #AAA;
-		height: 32px;
+    background: HSL(60, 100%, 95%);
+		height: 80px;
+		border-top: 10px solid HSL(0, 100%, 25%);
+}
+
+.main-navigation .nav-menu a:visited {
+	color: inherit;
+}
+
+.main-navigation .nav-menu a:focus,
+.main-navigation .nav-menu a:active {
+	color: HSL(210, 100%, 20%);
+}
+
+.main-navigation .nav-menu a:hover {
+	color: HSL(210, 100%, 40%);
+}
+
+.nav-menu {
+	margin: 20px;
+	padding: 20px;
+	float: none;
 }
 
 
@@ -971,7 +973,7 @@ video#landing-background {
 }
 
 .site-footer {
-	background-color: #036;
+	background-color: HSL(210, 100%, 20%);
 	text-align: center;
 	height: 100px;
 	color:white;
