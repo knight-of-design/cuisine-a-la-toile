@@ -156,3 +156,6 @@ function wpb_add_google_fonts() {
 wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Parisienne|Muli', false );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+//Theme Options
+require get_stylesheet_directory() . '/inc/options.php';
