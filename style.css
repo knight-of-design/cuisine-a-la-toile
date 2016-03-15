@@ -1029,14 +1029,18 @@ video#landing-background {
 		left: 20px;
 	}
 	#primary-menu {
-		display: none;
+		display: block;
 		width: 100%;
 		margin-top: -10px;
 		margin-left: 0;
 		position: relative;
+		overflow-y: scroll;
 		top: 170px;
 		background-color: HSL(210, 100%, 15%);
 		padding-left: 25px;
+		max-height: 0;
+		transition: max-height 2s ease-out;
+		z-index:50;
 	}
 	#primary-menu .nav-menu{
 		width: 100%;
@@ -1059,6 +1063,6 @@ video#landing-background {
 		color: HSL(210, 100%, 40%);
 	}
 	.toggled #primary-menu {
-		display: block;
+		max-height: 900px;
 	}
 }
