@@ -30,9 +30,15 @@
 			<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<img class="logo" src="<?php echo get_template_directory_uri();?>/assets/logo.png">
 			</a>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<span class="hamburger"></span>
+			<span class="hamburger"></span>
+			<span class="hamburger"></span>
+			<span class="text">
+			<?php esc_html_e( 'Menu', 'cuisine-a-la-toile' ); ?></span></button>
+		
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cuisine-a-la-toile' ); ?></button>
-		</nav><!-- #site-navigation -->
+			</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
 

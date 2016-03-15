@@ -531,7 +531,7 @@ a {
 }
 
 a:visited {
-	color: HSL(210, 100%, 40%);
+	color: HSL(210, 100%, 60%);
 }
 
 a:focus,
@@ -540,7 +540,7 @@ a:active {
 }
 
 a:hover {
-	color: HSL(210, 100%, 40%);
+	color: HSL(210, 100%, 60%);
 }
 
 a:focus {
@@ -951,17 +951,19 @@ object {
 }
 
 .main-navigation .nav-menu a:hover {
-	color: HSL(210, 100%, 40%);
+	color: HSL(210, 100%, 60%);
 }
+
 .main-navigation .logo{
 	width: 300px;
 	display: inline-block;
 	position: absolute;
 	left: 50px;
+	z-index: 100;
 }
 
 #primary-menu{
-display: inline-block;
+	display: inline-block;
   vertical-align: top;
 	margin-top: 50px;
 	margin-left: 50%;
@@ -985,4 +987,74 @@ video#landing-background {
 	height: 100px;
 	color:white;
 
+}
+
+.hamburger {
+	background-color: HSL(210, 100%, 20%);
+	display: block;
+	width: 20px;
+	height: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu-toggle:hover {
+	background-color: HSL(210, 100%, 20%);
+}
+
+.menu-toggle:hover .hamburger{
+	background-color: HSL(210, 100%, 60%);
+}
+
+@media screen and (max-width:861px) {
+	.menu-toggle {
+		display:block;
+		background: transparent;
+	 	box-shadow: none !important;
+	 	border: none;
+		outline: none;
+		position: absolute;
+		right: 15px;
+		top: 50px;
+	}
+	.text {
+		display: none;
+	}
+	.main-navigation .logo {
+		width: 250px;
+		left: 20px;
+	}
+	#primary-menu {
+		display: none;
+		width: 100%;
+		margin-top: -10px;
+		margin-left: 0;
+		position: relative;
+		top: 170px;
+		background-color: HSL(210, 100%, 20%);
+		padding-left: 25px;
+	}
+	#primary-menu .nav-menu{
+		width: 100%;
+	}
+	#primary-menu .nav-menu >.page_item {
+		display: block;
+		float: none;
+		text-align: left;
+	}
+	#primary-menu .nav-menu a,
+	#primary-menu .nav-menu a:visited,
+	#primary-menu .nav-menu a:focus,
+	#primary-menu .nav-menu a:active {
+		color: HSL(210, 100%, 60%);
+	}
+	#primary-menu .nav-menu a:hover {
+		color: HSL(0, 100%, 100%);
+	}
+	#primary-menu .nav-menu .current_page_item a{
+		color: HSL(0, 100%, 100%);
+	}
+	.toggled #primary-menu {
+		display: block;
+	}
 }
