@@ -954,6 +954,10 @@ object {
 	color: HSL(210, 100%, 60%);
 }
 
+.main-navigation .nav-menu .current_page_item a{
+	color: HSL(0, 100%, 25%);
+}
+
 .main-navigation .logo{
 	width: 300px;
 	display: inline-block;
@@ -968,6 +972,7 @@ object {
 	margin-top: 50px;
 	margin-left: 50%;
 }
+
 .nav-menu {
 	margin: 20px;
 	padding: 20px;
@@ -986,7 +991,6 @@ video#landing-background {
 	text-align: center;
 	height: 100px;
 	color:white;
-
 }
 
 .hamburger {
