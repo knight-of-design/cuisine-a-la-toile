@@ -999,7 +999,7 @@ video#landing-background {
 }
 
 .menu-toggle:hover {
-	background-color: HSL(210, 100%, 20%);
+	background-color: HSL(210, 100%, 15%);
 }
 
 .menu-toggle:hover .hamburger{
@@ -1031,7 +1031,7 @@ video#landing-background {
 		margin-left: 0;
 		position: relative;
 		top: 170px;
-		background-color: HSL(210, 100%, 20%);
+		background-color: HSL(210, 100%, 15%);
 		padding-left: 25px;
 	}
 	#primary-menu .nav-menu{
@@ -1052,7 +1052,7 @@ video#landing-background {
 		color: HSL(0, 100%, 100%);
 	}
 	#primary-menu .nav-menu .current_page_item a{
-		color: HSL(0, 100%, 100%);
+		color: HSL(210, 100%, 40%);
 	}
 	.toggled #primary-menu {
 		display: block;
