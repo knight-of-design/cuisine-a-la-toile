@@ -1010,7 +1010,7 @@ video#landing-background {
 	background-color: HSL(210, 100%, 60%);
 }
 
-@media screen and (max-width:861px) {
+@media screen and (max-width:950px) {
 	.menu-toggle {
 		display:block;
 		background: transparent;
