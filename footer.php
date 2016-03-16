@@ -18,6 +18,9 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cuisine-a-la-toile' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'cuisine-a-la-toile' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php
+//If statement
+//If the user enters the copyright content they want displayed in the options page, it will appear in this footer
+//else copyright 2016 will be posted as a default
 			$options = get_option('cuisine_options_settings');
 			if (isset($options['cuisine_text_field']) and $options['cuisine_text_field']!="") {
 				$copyright = $options['cuisine_text_field'];

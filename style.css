@@ -1068,11 +1068,11 @@ video#landing-background {
 /* Custom Optional Festive Styling */
 
 .style-christmas .main-navigation{
-	background-color: green !important;
+	background-color: HSL(92, 73%, 29%)!important;
 }
 
 .style-easter .main-navigation{
-	background-color: yellow !important;
+	background-color: HSL(60, 100%, 75%)!important;
 }
 
 /* creates a media query for screens of 1400px as learned in the responsive design lecture */

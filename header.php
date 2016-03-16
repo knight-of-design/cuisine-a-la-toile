@@ -21,6 +21,9 @@
 </head>
 
 <body <?php
+//If statement
+//Will change the header color to either the Christmas or Easter option
+//else the header will remain the same colour
 $options = get_option('cuisine_options_settings');
 if (isset($options['cuisine_select_field']) and $options['cuisine_select_field']!="") {
 	$festiveStyleClass = "style-".$options['cuisine_select_field'];

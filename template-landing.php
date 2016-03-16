@@ -28,6 +28,9 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 <?php
+//If statement
+//If the user enters the promotion content they want displayed in the options page, it will appear on the landing page
+//else nothing will appear as a default
 $options = get_option('cuisine_options_settings');
 
 if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_field']!="") {
