@@ -906,6 +906,7 @@ object {
 }
 
 /* Cuisine a la Toile Styling */
+/* organizes sections of the site */
 #page {
 	width: 100%;
 	position: relative; /* fixes wp .admin-bar */
@@ -936,6 +937,9 @@ object {
 	margin-bottom: -14px;
 }
 
+/* styles the menu bar */
+/* Uses HSL colors for easy manipulation of colours as retrieved from
+http://serennu.com/colour/hsltorgb.php */
 .main-navigation {
     position: fixed;
 		z-index: 2000;
@@ -974,6 +978,7 @@ object {
 	margin-left: 50%;
 }
 
+/* creates a hamburger menu */
 .icon-hamburger {
 	display: block;
 	padding: 5px;
@@ -1004,7 +1009,7 @@ object {
 	float: none;
 }
 
-
+/* styles the video */
 .video-wrapper {
 	max-height: 70vh;
 	overflow: hidden;
@@ -1018,6 +1023,7 @@ video#landing-background {
 	bottom: 0;
 }
 
+/* creates a media query for screens of 1400px as learned in the responsive design lecture */
 @media screen and (min-width:1400px){
 	video#landing-background {
 		margin-top: -11%;
@@ -1033,6 +1039,7 @@ video#landing-background {
 	color:white;
 }
 
+/* creates a media query for screens of 950px as learned in the responsive design lecture */
 @media screen and (max-width:950px) {
 	.menu-toggle {
 		display:block;
