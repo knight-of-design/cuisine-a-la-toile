@@ -48,6 +48,7 @@ html {
 	font-family: 'Muli', 'Arial', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	min-height: 100%;
 }
 
 body {
@@ -906,15 +907,14 @@ object {
 
 /* Cuisine a la Toile Styling */
 #page {
-	text-align: center;
 	width: 100%;
 	position: relative; /* fixes wp .admin-bar */
 }
 
 #content {
-	max-width: 960px;
 	width: 100%;
-	display: inline-block;
+	text-align: center;
+	padding-top:40px;
 }
 
 #primary {
@@ -933,13 +933,14 @@ object {
 
 .site-header {
 	padding-top: 138px;
+	margin-bottom: -14px;
 }
 
 .main-navigation {
     position: fixed;
 		z-index: 2000;
     top: 0;
-    background: HSL(60, 100%, 95%);
+    background: HSL(60, 100%, 96%);
 		height: 170px;
 		border-top: 10px solid HSL(0, 100%, 25%);
 }
@@ -973,41 +974,63 @@ object {
 	margin-left: 50%;
 }
 
-.nav-menu {
-	margin: 20px;
-	padding: 20px;
-	float: none;
-}
-
-video#landing-background {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	z-index: -1;
-}
-
-.site-footer {
-	background-color: HSL(210, 100%, 20%);
-	text-align: center;
-	height: 100px;
-	color:white;
-}
-
-.hamburger {
-	background-color: HSL(210, 100%, 20%);
+.icon-hamburger {
 	display: block;
-	width: 20px;
-	height: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.icon-hamburger-line{
+	display: block;
+
+	width: 30px;
+	height: 4px;
+	margin: 5px 0;
+	border-radius: 8px;
+
+	background-color: HSL(210, 100%, 20%);
 }
 
 .menu-toggle:hover {
 	background-color: HSL(210, 100%, 15%);
 }
 
-.menu-toggle:hover .hamburger{
+.menu-toggle:hover .icon-hamburger .icon-hamburger-line{
 	background-color: HSL(210, 100%, 60%);
+}
+
+.nav-menu {
+	margin: 20px;
+	padding: 20px;
+	float: none;
+}
+
+
+.video-wrapper {
+	max-height: 70vh;
+	overflow: hidden;
+	margin-top: -40px;
+	position: relative;
+}
+
+video#landing-background {
+	width: 100%;
+	z-index: -1;
+	bottom: 0;
+}
+
+@media screen and (min-width:1400px){
+	video#landing-background {
+		margin-top: -11%;
+	}
+}
+
+.site-footer {
+	position: absolute;
+	bottom: 0;
+	background-color: HSL(210, 100%, 20%);
+	text-align: center;
+	height: 100px;
+	color:white;
 }
 
 @media screen and (max-width:950px) {
@@ -1020,14 +1043,18 @@ video#landing-background {
 		position: absolute;
 		right: 15px;
 		top: 50px;
+		padding:0;
 	}
-	.text {
+
+	.menu-toggle .text {
 		display: none;
 	}
+
 	.main-navigation .logo {
 		width: 250px;
 		left: 20px;
 	}
+
 	#primary-menu {
 		display: block;
 		width: 100%;
@@ -1039,17 +1066,20 @@ video#landing-background {
 		background-color: HSL(210, 100%, 15%);
 		padding-left: 25px;
 		max-height: 0;
-		transition: max-height 2s ease-out;
+		transition: max-height 2.5s ease-out;
 		z-index:50;
 	}
+
 	#primary-menu .nav-menu{
 		width: 100%;
 	}
-	#primary-menu .nav-menu >.page_item {
+
+	#primary-menu .nav-menu > .page_item {
 		display: block;
 		float: none;
 		text-align: left;
 	}
+
 	#primary-menu .nav-menu a,
 	#primary-menu .nav-menu a:visited,
 	#primary-menu .nav-menu a:focus,

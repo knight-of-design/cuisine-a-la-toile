@@ -31,12 +31,17 @@
 				<img class="logo" src="<?php echo get_template_directory_uri();?>/assets/logo.png">
 			</a>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-			<span class="hamburger"></span>
-			<span class="hamburger"></span>
-			<span class="hamburger"></span>
-			<span class="text">
-			<?php esc_html_e( 'Menu', 'cuisine-a-la-toile' ); ?></span></button>
-		
+				<i class="icon-hamburger">
+					<i class="icon-hamburger-line"></i>
+					<i class="icon-hamburger-line"></i>
+					<i class="icon-hamburger-line"></i>
+				</i>
+
+				<span class="text">
+					<?php esc_html_e( 'Menu', 'cuisine-a-la-toile' ); ?>
+				</span>
+			</button>
+
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 

@@ -49,6 +49,11 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+
+		<p> Hi </p>
+	<p> HERE	<?php echo next_posts_link(); ?> </p>
+		<?php next_posts_link( 'Older Entries »', 0 ); ?>
+		
 	</div><!-- #primary -->
 
 <?php
