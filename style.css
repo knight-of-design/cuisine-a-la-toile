@@ -1038,7 +1038,17 @@ video#landing-background {
 
 	background-color: HSL(210, 100%, 8%);
 	height: 100px;
-	color:white;
+	color: HSL(0, 100%, 100%);
+}
+
+.site-footer a
+{
+	color:HSL(0, 100%, 100%);
+}
+
+.site-footer a:hover
+{
+	color:HSL( 8, 100%, 45%);
 }
 
 /* creates a media query for screens of 950px as learned in the responsive design lecture */
