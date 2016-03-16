@@ -36,7 +36,7 @@ add_settings_field(
 //Whatever the user inputs will display on the page
 function cuisine_text_field_render() {
 $options = get_option( 'cuisine_options_settings' ); ?>
-<input type="text" name="cuisine_options_settings[text_field]" value="<?php if (isset($options['cuisine_text_field'])) echo $options['cuisine_text_field']; ?>" />
+<input type="text" name="cuisine_options_settings[cuisine_text_field]" value="<?php if (isset($options['cuisine_text_field'])) echo $options['cuisine_text_field']; ?>" />
 <?php
 }
 
