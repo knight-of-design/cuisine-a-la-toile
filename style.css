@@ -1033,14 +1033,16 @@ video#landing-background {
 .site-footer {
 	position: absolute;
 	bottom: 0;
-	background-color: HSL(210, 100%, 20%);
+	width:100%;
 	text-align: center;
+
+	background-color: HSL(210, 100%, 8%);
 	height: 100px;
 	color:white;
 }
 
 /* creates a media query for screens of 950px as learned in the responsive design lecture */
-@media screen and (max-width:950px) {
+@media screen and (max-width:1000px) {
 	.menu-toggle {
 		display:block;
 		background: transparent;
