@@ -30,6 +30,7 @@
 			<a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<img class="logo" src="<?php echo get_template_directory_uri();?>/assets/logo.png">
 			</a>
+			<!-- inserts a hamburger menu from inspiration from codediva -->
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<i class="icon-hamburger">
 					<i class="icon-hamburger-line"></i>
