@@ -48,7 +48,6 @@ html {
 	font-family: 'Muli', 'Arial', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
-	min-height: 100%;
 }
 
 body {
@@ -907,12 +906,26 @@ object {
 
 /* Cuisine a la Toile Styling */
 /* organizes sections of the site */
+
+html,
+body{
+	height: 100%;
+}
+
 #page {
 	width: 100%;
+	height:auto;
+	min-height: 100%;
 	position: relative; /* fixes wp .admin-bar */
 }
 
+.site-header {
+	padding-top: 138px;
+	margin-bottom: -14px;
+}
+
 #content {
+	box-sizing: border-box;
 	width: 100%;
 	text-align: center;
 	padding-top:40px;
@@ -932,9 +945,27 @@ object {
 	vertical-align: top;
 }
 
-.site-header {
-	padding-top: 138px;
-	margin-bottom: -14px;
+.site-footer {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	text-align: center;
+
+	background-color: HSL(210, 100%, 8%);
+	color: HSL(0, 100%, 100%);
+
+	min-height: 200px;
+	margin-top: -200px;
+}
+
+.site-footer a
+{
+	color:HSL(0, 100%, 100%);
+}
+
+.site-footer a:hover
+{
+	color:HSL( 8, 100%, 45%);
 }
 
 /* styles the menu bar */
@@ -1030,26 +1061,7 @@ video#landing-background {
 	}
 }
 
-.site-footer {
-	position: absolute;
-	bottom: 0;
-	width:100%;
-	text-align: center;
 
-	background-color: HSL(210, 100%, 8%);
-	height: 100px;
-	color: HSL(0, 100%, 100%);
-}
-
-.site-footer a
-{
-	color:HSL(0, 100%, 100%);
-}
-
-.site-footer a:hover
-{
-	color:HSL( 8, 100%, 45%);
-}
 
 /* creates a media query for screens of 950px as learned in the responsive design lecture */
 @media screen and (max-width:1000px) {
