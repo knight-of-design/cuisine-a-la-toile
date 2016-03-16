@@ -27,6 +27,16 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 
 		<main id="main" class="site-main" role="main">
+<?php
+$options = get_option('cuisine_options_settings');
+
+if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_field']!="") {
+	$promo = $options['cuisine_textarea_field'];
+	?>
+	<div class="promo"><?php echo $promo; ?></div>
+	<?php
+}
+ ?>
 
 		<?php
 		if ( have_posts() ) :

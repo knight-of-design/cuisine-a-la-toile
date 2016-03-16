@@ -1056,6 +1056,16 @@ video#landing-background {
 	bottom: 0;
 }
 
+/* Custom Optional Festive Styling */
+
+.style-christmas .main-navigation{
+	background-color: green !important;
+}
+
+.style-easter .main-navigation{
+	background-color: yellow !important;
+}
+
 /* creates a media query for screens of 1400px as learned in the responsive design lecture */
 @media screen and (min-width:1400px){
 	video#landing-background {

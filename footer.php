@@ -18,9 +18,15 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cuisine-a-la-toile' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'cuisine-a-la-toile' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php
-			$copyright = get_option('cuisine_options_settings')['cuisine_text_field'];
+			$options = get_option('cuisine_options_settings');
+			if (isset($options['cuisine_text_field']) and $options['cuisine_text_field']!="") {
+				$copyright = $options['cuisine_text_field'];
+			}
+			else {
+				$copyright = "&copy; 2016";
+			}
 
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'cuisine-a-la-toile' ), 'cuisine-a-la-toile', $copyright ); ?>
+			printf( esc_html__( 'Theme: %1$s %2$s.', 'cuisine-a-la-toile' ), 'cuisine-a-la-toile', $copyright ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -65,7 +65,7 @@ $options = get_option( 'cuisine_options_settings' );
 //Adding a select box
 add_settings_field(
 'cuisine_select_field', //id
-'Select your background color of choice:', //Title (visible to user)
+'Select festive custom styling:', //Title (visible to user)
 'cuisine_select_field_render', //$callback
 'theme_options',  //page
 'cuisine_options_page_section' //section
@@ -77,9 +77,11 @@ function cuisine_select_field_render() {
 $options = get_option('cuisine_options_settings'); ?>
 
 <select name="cuisine_options_settings[cuisine_select_field]">
-<option value="1" <?php if (isset($options['cuisine_select_field'])) selected($options['cuisine_select_field'], 1 ); ?>>Option 1</option>
+  <option value="" <?php if (isset($options['cuisine_select_field'])) selected($options['cuisine_select_field'], "" ); ?>>Regular</option>
 
-<option value="2" <?php if (isset($options['cuisine_select_field'])) selected($options['cuisine_select_field'], 2 ); ?>>Option 2</option>
+<option value="christmas" <?php if (isset($options['cuisine_select_field'])) selected($options['cuisine_select_field'], "christmas" ); ?>>Christmas</option>
+
+<option value="easter" <?php if (isset($options['cuisine_select_field'])) selected($options['cuisine_select_field'], "easter" ); ?>>Easter</option>
 </select>
 
 <?php

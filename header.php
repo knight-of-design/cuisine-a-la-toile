@@ -20,7 +20,17 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php
+$options = get_option('cuisine_options_settings');
+if (isset($options['cuisine_select_field']) and $options['cuisine_select_field']!="") {
+	$festiveStyleClass = "style-".$options['cuisine_select_field'];
+	body_class($festiveStyleClass);
+}
+else {
+	body_class();
+}
+?>>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cuisine-a-la-toile' ); ?></a>
 
