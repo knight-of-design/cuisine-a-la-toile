@@ -151,11 +151,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-// Adds a custom Google font. 
+// Adds a custom Google font.
 function wpb_add_google_fonts() {
 wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Parisienne|Muli', false );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
-//Theme Options
+//Theme Options: It calls the file (options.php) that controls the theme options.
 require get_stylesheet_directory() . '/inc/options.php';

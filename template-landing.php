@@ -13,15 +13,16 @@
  * @package Cuisine_a_la_Toile
  */
 
+/* Places a video in the background of the landing page. It is set on autoplay loop muted.
+The video can be accessed at: https://www.flickr.com/photos/manikrathee/8296685740/in/photolist-dD9FBS-dD4ePk-dD9E4E-dD4huv-dD4gFH-dD9Acq-dD4fMZ-dD9BKJ-dD9D5f-dD9Gp1-dD4jdn-7JtWwb-pzPt2Y-7uiTeW-76Ya9t-773iTW-AXECvb-zdvkyZ-nhGar3-5c6yWA-6FnBv1-56r1K7-56qVEy-56mUrX-nfUUDY-nfUW6q-nhZxHA-nfUWYh-nhEUG4-y3PB5T-56mP6K-4E2c76-rQ1mPn-DeJ8iA-AdvTuJ-6GhQgF-aq867o-5jPMoy-9fBSt4-BnTrDh-ASv54W-BQ2dk6-4Wwk4Z-4WACKq-7cfZMB-7ci4zj-4WABHU-aHbS7Z-6MhXZc-6MhUanand
+This video falls under the creative commons.
+  */
 get_header(); ?>
-
 <div class="video-wrapper">
 	<video id="landing-background" autoplay loop muted>
 		<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
 	</video>
 </div>
-
-
 
 	<div id="primary" class="content-area">
 
