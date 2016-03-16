@@ -908,15 +908,17 @@ object {
 /* organizes sections of the site */
 
 html,
-body{
-	height: 100%;
+body,
+#page{
+	min-height: 100vh;
+	height:auto;
 }
 
 #page {
 	width: 100%;
 	height:auto;
-	min-height: 100%;
 	position: relative; /* fixes wp .admin-bar */
+	padding-bottom: 1px;
 }
 
 .site-header {
@@ -955,7 +957,6 @@ body{
 	color: HSL(0, 100%, 100%);
 
 	min-height: 200px;
-	margin-top: -200px;
 }
 
 .site-footer a
