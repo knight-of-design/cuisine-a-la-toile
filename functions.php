@@ -159,3 +159,44 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
 //Theme Options: It calls the file (options.php) that controls the theme options.
 require get_stylesheet_directory() . '/inc/options.php';
+
+//Adds a custom gravatar
+add_filter( 'avatar_defaults', 'cuisine_a_la_toile' );
+function cuisine_a_la_toile ($avatar_defaults) {
+   $myavatar = get_stylesheet_directory_uri() . 'assets/images/gravatar.png';
+    $avatar_defaults[$myavatar] = __( 'Custom Gravatar', 'cuisine' );
+    return $avatar_defaults;
+}
+
+//Adds a signature after each post
+add_filter('the_content','add_signature', 1);
+function add_signature($text) {
+ global $post;
+ if(($post->post_type == 'post'))
+    $text .= '<div class="signature">~Bon Appetite!</div>';
+    return $text;
+}
+
+//Adds a menu in the footer
+register_nav_menus( array('secondary' => __( 'Footer Menu' ),));
+
+//Pagination within the category
+function cd_posts_navigation() {
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+	$args = array(
+    'mid_size' => 2,
+    'prev_text' => __( 'Backward', 'cuisine' ),
+    'next_text' => __( 'Forward', 'cuisine' )
+);
+	?>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'cuisine' ); ?></h2>
+		<div class="nav-links">
+			<?php the_posts_pagination( $args ); ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
