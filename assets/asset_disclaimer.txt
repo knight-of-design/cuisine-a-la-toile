@@ -1,1 +1,5 @@
-All images were accessed through the creative commons 
+All media were accessed through the creative commons
+Gravatar created at htt://canva.ca
+
+Any other media used on the site is either referenced in a comment
+or is referenced / sourced in the Wordpress media description field
