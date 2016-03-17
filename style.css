@@ -1186,6 +1186,11 @@ video#landing-background {
 
 .grid-middle{
 	padding: 30px 15%;
+	font-size: 0.9em;
+}
+
+.grid-middle img {
+	width: 50%;
 }
 
 .grid-item {
@@ -1194,6 +1199,10 @@ video#landing-background {
 	padding: 20px 10px;
 }
 
+.grid-item img {
+	width: auto;
+	height: 170px;
+}
 
 /* creates a media query for screens of 1400px as learned in the responsive design lecture */
 @media screen and (min-width:1400px){
