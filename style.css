@@ -785,6 +785,20 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+/* Styles footer menu */
+.page_item {
+	text-align: left;
+	display: inline-block;
+	float: none;
+	padding: 10px;
+}
+
+.menu ul {
+	padding: 20px 0;
+	text-align: center;
+	margin: 0;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1134,7 +1148,7 @@ video#landing-background {
 
 
 
-/* creates a media query for screens of 950px as learned in the responsive design lecture */
+/* creates a media query for screens of 1000px as learned in the responsive design lecture */
 @media screen and (max-width:1000px) {
 	.menu-toggle {
 		display:block;
@@ -1196,5 +1210,13 @@ video#landing-background {
 	}
 	.toggled #primary-menu {
 		max-height: 900px;
+	}
+}
+
+/* creates a media query for screens of 414px as learned in the responsive design lecture */
+@media screen and (max-width:414px) {
+	.menu ul .page_item {
+		display: block;
+		text-align: center;
 	}
 }
