@@ -1161,6 +1161,28 @@ video#landing-background {
 	background-color: HSL(60, 100%, 96%);
 }
 
+.grid-item, .grid-jumbo, .grid-middle {
+	display: inline-block;
+	width:100%;
+	vertical-align: top;
+	text-align: left;
+}
+
+.grid-item {
+	max-width: 370px;
+}
+
+.grid-jumbo, .grid-middle {
+	max-width: 750px;
+	border-top: 1px solid HSLA(0,0%,60%,0.2);
+	border-bottom: 1px solid HSLA(0,0%,60%,0.2);
+}
+
+.grid-middle{
+	padding: 30px 15%;
+}
+
+
 /* creates a media query for screens of 1400px as learned in the responsive design lecture */
 @media screen and (min-width:1400px){
 	video#landing-background {

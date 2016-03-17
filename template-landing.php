@@ -28,7 +28,7 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 <?php
-
+$page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 while ( have_posts() ) : the_post();
 
     get_template_part( 'template-parts/content', get_post_format() );
@@ -49,7 +49,7 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 
 	$count = 0;
 	wp_reset_query();
-	$page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 	$args = array(
 	'post_type' => 'cuisine_recipe',
     'meta_query' => array(array('key' => '_thumbnail_id')),
