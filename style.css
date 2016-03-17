@@ -786,17 +786,19 @@ a:active {
 }
 
 /* Styles footer menu */
-.page_item {
+.site-footer .menu .page_item,
+.site-footer .menu .menu-item{
 	text-align: left;
 	display: inline-block;
 	float: none;
 	padding: 10px;
 }
 
-.menu ul {
+.site-footer .menu ul {
 	padding: 20px 0;
 	text-align: center;
 	margin: 0;
+	list-style: none;
 }
 
 /*--------------------------------------------------------------
@@ -1149,7 +1151,7 @@ video#landing-background {
 
 
 /* creates a media query for screens of 1000px as learned in the responsive design lecture */
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1100px) {
 	.menu-toggle {
 		display:block;
 		background: transparent;
@@ -1215,15 +1217,15 @@ video#landing-background {
 
 /* creates a media query for screens of 414px as learned in the responsive design lecture */
 @media screen and (max-width:414px) {
-	.menu ul .page_item {
+	.site-footer .menu .page_item {
 		display: block;
 		text-align: center;
 	}
-	.site-info >a {
+	.site-footer .site-info >a {
 		display: block;
 		padding: 10px 0;
 	}
-	.site-info .sep {
+	.site-footer .site-info .sep {
 		display: none;
 	}
 }
