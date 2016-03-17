@@ -1202,7 +1202,14 @@ video#landing-background {
 		display: block;
 		float: none;
 		text-align: left;
-		padding: 15px 25px;
+		padding: 15px 60px;
+	}
+
+	#primary-menu li:first-child {
+		padding-top: 70px;
+	}
+	#primary-menu li:last-child {
+		padding-bottom: 70px;
 	}
 
 	#primary-menu  a,
@@ -1219,7 +1226,6 @@ video#landing-background {
 	}
 	.toggled #primary-menu {
 		max-height: 900px;
-		padding: 50px 30px;
 	}
 }
 
