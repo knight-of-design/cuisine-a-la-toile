@@ -1219,4 +1219,11 @@ video#landing-background {
 		display: block;
 		text-align: center;
 	}
+	.site-info >a {
+		display: block;
+		padding: 10px 0;
+	}
+	.site-info .sep {
+		display: none;
+	}
 }
