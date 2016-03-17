@@ -1179,6 +1179,8 @@ video#landing-background {
 		left: 20px;
 	}
 
+
+
 	#primary-menu {
 		display: block;
 		width: 100%;
@@ -1188,36 +1190,36 @@ video#landing-background {
 		overflow-y: scroll;
 		top: 170px;
 		background-color: HSL(210, 100%, 15%);
-		padding-left: 25px;
+
 		max-height: 0;
 		transition: max-height 2.5s ease-out;
 		z-index:50;
+		padding:0;
 	}
 
-	#primary-menu .nav-menu{
-		width: 100%;
-	}
 
-	#primary-menu .nav-menu > li {
+	#primary-menu  li {
 		display: block;
 		float: none;
 		text-align: left;
+		padding: 15px 25px;
 	}
 
-	#primary-menu .nav-menu a,
-	#primary-menu .nav-menu a:visited,
-	#primary-menu .nav-menu a:focus,
-	#primary-menu .nav-menu a:active {
+	#primary-menu  a,
+	#primary-menu  a:visited,
+	#primary-menu a:focus,
+	#primary-menu a:active {
 		color: HSL(210, 100%, 60%);
 	}
-	#primary-menu .nav-menu a:hover {
+	#primary-menu a:hover {
 		color: HSL(0, 100%, 100%);
 	}
-	#primary-menu .nav-menu .current_page_item a{
+	#primary-menu .current_page_item a{
 		color: HSL(210, 100%, 40%);
 	}
 	.toggled #primary-menu {
 		max-height: 900px;
+		padding: 50px 30px;
 	}
 }
 
