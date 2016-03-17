@@ -23,6 +23,13 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 <?php
+
+while ( have_posts() ) : the_post();
+
+	get_template_part( 'template-parts/content', get_post_format() );
+
+endwhile; // End of the loop.
+
 //If statement
 //If the user enters the promotion content they want displayed in the options page, it will appear on the landing page
 //else nothing will appear as a default
@@ -34,11 +41,6 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	<div class="promo"><?php echo $promo; ?></div>
 	<?php
 }
-while ( have_posts() ) : the_post();
-
-	get_template_part( 'template-parts/content', get_post_format() );
-
-endwhile; // End of the loop.
 	$count = 0;
 	wp_reset_query();
 	$page = get_query_var('page');
