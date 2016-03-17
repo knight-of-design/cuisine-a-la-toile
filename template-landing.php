@@ -39,38 +39,57 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	<div class="promo"><?php echo $promo; ?></div>
 	<?php
 }
- ?>
+	$count = 0;
+	wp_reset_query();
+	$page = get_query_var('page');
+	$args = array(
+	'post_type' => 'cuisine_recipe',
+	// NOTE: 'showposts' is deprecated according to WP Codex 2016
+	'posts_per_page' => 6,
+	'paged' => $page,
+	'order' => 'DESC'
+	);
+	$wp_query = new WP_Query($args);
 
-		<?php
-		if ( have_posts() ) :
+	if ( $wp_query->have_posts() ) :
+ 		// Start the Loop
+ 		while ($wp_query->have_posts() ) : $wp_query->the_post();
+			$count++;
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+            if ($count == 1) $gridClass = 'grid-jumbo';
+            elseif ($count == 4) $gridClass = 'grid-middle';
+            else $gridClass = 'grid-item';
+?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class($gridClass); ?>>
 
-			<?php
-			endif;
+				<?php
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				if ( has_post_thumbnail() ){ ?>
+					<div class="preview">
+                        <a href="<?php echo esc_url( get_permalink() );?>">
+						<?php the_post_thumbnail(array(500,500));
+						the_title( '<h1 class="entry-title">', '</h1>' );
 
-			endwhile;
+						?>
+                            </a>
+
+					</div>
+				<?php }
+
+				?>
+
+			</article><!-- #post-## -->
+				<?php
 
 			the_posts_navigation();
+		endwhile;
 
-		else :
+	else :
 
-			get_template_part( 'template-parts/content', 'none' );
+		get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+	endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -223,7 +223,7 @@ function add_signature($text) {
 }
 
 //Adds a menu in the footer
-register_nav_menus( array('secondary' => __( 'Footer Menu' ),));
+register_nav_menus( array('cuisine-footer' => __( 'Footer Menu' ),));
 
 //Pagination within the category
 function cd_posts_navigation() {

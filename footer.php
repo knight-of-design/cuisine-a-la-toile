@@ -14,6 +14,10 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div id="menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'cuisine-footer' ) ); ?>
+		</div>
+
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cuisine-a-la-toile' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'cuisine-a-la-toile' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
