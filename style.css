@@ -553,6 +553,7 @@ a:active {
 	outline: 0;
 }
 
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -786,14 +787,14 @@ a:active {
 }
 
 /* Styles footer menu */
-.site-footer .menu li{
+.site-footer #menu li{
 	text-align: left;
 	display: inline-block;
 	float: none;
 	padding: 10px;
 }
 
-.site-footer .menu ul {
+.site-footer #menu ul {
 	padding: 20px 0;
 	text-align: center;
 	margin: 0;
@@ -933,6 +934,7 @@ body,
 	min-height: 100vh;
 	height:auto;
 	background-color: HSL(45, 30%, 85%);
+	overflow-x:hidden;
 }
 
 #page {
@@ -999,6 +1001,7 @@ body,
 	box-shadow: 1px 1px 5px HSL(0,0%,80%);
 
 	border-radius: 10px;
+	margin-bottom: 60px;
 }
 
 #secondary ul {
@@ -1205,10 +1208,10 @@ video#landing-background {
 }
 
 /*gallery page template spicific styling */
-.page-template-template-gallery .grid-item .entry-title,
-.page-template-template-gallery .grid-jumbo .entry-title,
-.page-template-template-gallery .grid-middle .entry-title{
-	font-size: 0.85em;
+.page-template-template-gallery .grid-item ,
+.page-template-template-gallery .grid-jumbo ,
+.page-template-template-gallery .grid-middle {
+	font-size: 0.6em;
 }
 
 
@@ -1296,8 +1299,8 @@ video#landing-background {
 }
 
 /* creates a media query for screens of 414px as learned in the responsive design lecture */
-@media screen and (max-width:414px) {
-	.site-footer .menu > li {
+@media screen and (max-width:620px) {
+	.site-footer #menu  li {
 		display: block;
 		text-align: center;
 	}
@@ -1307,5 +1310,9 @@ video#landing-background {
 	}
 	.site-footer .site-info .sep {
 		display: none;
+	}
+
+	.grid-item, .grid-jumbo, .grid-middle {
+		text-align: center;
 	}
 }
