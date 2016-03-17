@@ -30,11 +30,17 @@
 				$copyright = $options['cuisine_text_field'];
 			}
 			else {
-				$copyright = "&copy; 2016";
+				$copyright = "Theme Cuisine a la Toile &copy; 2016";
 			}
 
-			printf( esc_html__( 'Theme: %1$s %2$s.', 'cuisine-a-la-toile' ), 'cuisine-a-la-toile', $copyright ); ?>
+			printf( esc_html__( '%1$s', 'cuisine-a-la-toile' ),  $copyright );
+                if (wp_is_mobile()){
+                    printf( esc_html__( 'Mobile Enabled' ));
+                }
+            ?>
+
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

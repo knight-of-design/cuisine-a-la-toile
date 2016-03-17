@@ -41,7 +41,7 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 }
 	$count = 0;
 	wp_reset_query();
-	$page = get_query_var('page');
+	$page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$args = array(
 	'post_type' => 'cuisine_recipe',
     'meta_query' => array(array('key' => '_thumbnail_id')),
@@ -86,7 +86,7 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 
 
 		endwhile;
-        the_posts_navigation();
+        the_posts_pagination( array( 'mid_size'  => 2 ) );
 
 	else :
 
