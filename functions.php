@@ -8,6 +8,60 @@
  */
 
 if ( ! function_exists( 'cuisine_a_la_toile_setup' ) ) :
+
+function cuisine_a_la_toile_init(){
+	register_taxonomy(
+		'cusine_recipe_meal_course',
+		'cusine_recipe',
+		array(
+			'labels' => array(
+					'name' =>	__( 'Meal Courses', 'cuisine_a_la_toile'),
+          'singular_name' => __( 'Meal Course', 'cuisine_a_la_toile'),
+					'all_items' => __( 'All Meal Courses' , 'cuisine_a_la_toile'),
+					'edit_item'  => __( 'Edit Meal Course', 'cuisine_a_la_toile' ),
+					'view_item' => __( 'View Meal Course' , 'cuisine_a_la_toile'),
+					'update_item'  => __( 'Update Meal Course', 'cuisine_a_la_toile' ),
+					'add_new_item'  => __( 'Add New Meal Course', 'cuisine_a_la_toile' ),
+					'new_item_name'  => __( 'New Meal Course Name', 'cuisine_a_la_toile' ),
+					'search_items' =>  __( 'Search Meal Courses', 'cuisine_a_la_toile' ),
+					'not_found' => __( 'No Meal Courses found.', 'cuisine_a_la_toile' )
+
+				),
+			'rewrite' => array( 'slug' => 'entree' ),
+			'public' => true,
+			'show_ui' => true,
+			'hierarchical' => true,
+		));
+
+	register_post_type('cuisine_recipe', array(
+      'labels' => array(
+        'name' => __( 'Recipes', 'cuisine_a_la_toile' ),
+        'singular_name' => __( 'Recipe', 'cuisine_a_la_toile')
+      ),
+			'taxonomies' => array('cusine_recipe_meal_course'),
+			'hierarchical'        => false,
+      'public' => true,
+      'has_archive' => true,
+			'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+			'menu_position'       => 3,
+
+
+			'rewrite' => array('slug' => 'recipe'),
+    ));
+	register_post_type('cusine_recipe_gallery', array(
+      'labels' => array(
+        'name' => __( 'Recipe Gallery' ),
+        'singular_name' => __( 'Recipe Gallery Item' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+			'rewrite' => array('slug' => 'recipe_gallery'),
+    ));
+
+
+}
+
+add_action('init',cuisine_a_la_toile_init);
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
