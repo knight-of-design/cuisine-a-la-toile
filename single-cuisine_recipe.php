@@ -42,6 +42,12 @@ get_header(); ?>
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
 
+		if ( has_post_thumbnail() ){ ?>
+			<div class="entry-thumbnail">
+				  <?php the_post_thumbnail(array(500,500)); ?>
+			</div>
+		<?php }
+
 					$ingredients = get_post_meta(get_the_ID(),'Ingredients',true);
 					$directions = get_post_meta(get_the_ID(),'Directions',true);
 

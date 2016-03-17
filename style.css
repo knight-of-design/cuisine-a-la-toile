@@ -528,6 +528,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: HSL(210, 100%, 20%);
+	text-decoration: none;
 }
 
 a:visited {
@@ -773,6 +774,10 @@ a:active {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.entry-footer > span {
+	padding: 10px 5px;
 }
 
 .page-links {
