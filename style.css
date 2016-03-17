@@ -786,8 +786,7 @@ a:active {
 }
 
 /* Styles footer menu */
-.site-footer .menu .page_item,
-.site-footer .menu .menu-item{
+.site-footer .menu li{
 	text-align: left;
 	display: inline-block;
 	float: none;
@@ -1073,7 +1072,7 @@ http://serennu.com/colour/hsltorgb.php */
 
 @media screen and (min-width:1300px){
 		#primary-menu {
-			margin-left: 65%;
+			margin-left: 62%;
 		}
 }
 /* creates a hamburger menu */
@@ -1199,7 +1198,7 @@ video#landing-background {
 		width: 100%;
 	}
 
-	#primary-menu .nav-menu > .page_item {
+	#primary-menu .nav-menu > li {
 		display: block;
 		float: none;
 		text-align: left;
@@ -1224,7 +1223,7 @@ video#landing-background {
 
 /* creates a media query for screens of 414px as learned in the responsive design lecture */
 @media screen and (max-width:414px) {
-	.site-footer .menu .page_item {
+	.site-footer .menu > li {
 		display: block;
 		text-align: center;
 	}
