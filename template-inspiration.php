@@ -47,7 +47,7 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	wp_reset_query();
 	$args = array(
 	'category_name' => 'inspiration',
-	'posts_per_page' => 6,
+	'posts_per_page' => 1,
 	'paged' => $page,
 	'order' => 'DESC'
 	);
