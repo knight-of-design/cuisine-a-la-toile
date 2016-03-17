@@ -76,8 +76,9 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 			</article><!-- #post-## -->
 				<?php
 
-			the_posts_navigation();
+
 		endwhile;
+		the_posts_navigation();
 
 	else :
 
