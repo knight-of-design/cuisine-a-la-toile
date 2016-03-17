@@ -950,6 +950,22 @@ body,
 	min-height: 35vh;
 }
 
+#ingredients,
+#directions,
+#comments {
+	text-align: left;
+}
+
+#ingredients ul,
+#directions ol  {
+	padding-left: 6px;
+}
+
+#ingredients li,
+#directions li {
+	padding: 6px 2px;
+}
+
 #secondary {
 	display: inline-block;
 	max-width: 240px;

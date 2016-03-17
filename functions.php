@@ -27,7 +27,7 @@ function cuisine_a_la_toile_init(){
 					'not_found' => __( 'No Meal Courses found.', 'cuisine_a_la_toile' )
 
 				),
-			'rewrite' => array( 'slug' => 'entree' ),
+			'rewrite' => array( 'slug' => 'course'),
 			'public' => true,
 			'show_ui' => true,
 			'hierarchical' => true,
@@ -44,20 +44,11 @@ function cuisine_a_la_toile_init(){
       'has_archive' => true,
 			'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
 			'menu_position'       => 3,
-
-
+			    'publicly_queryable' => true,
+					 'query_var' => true,
+					 'capability_type' => 'post',
 			'rewrite' => array('slug' => 'recipe'),
     ));
-	register_post_type('cusine_recipe_gallery', array(
-      'labels' => array(
-        'name' => __( 'Recipe Gallery' ),
-        'singular_name' => __( 'Recipe Gallery Item' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-			'rewrite' => array('slug' => 'recipe_gallery'),
-    ));
-
 
 }
 
