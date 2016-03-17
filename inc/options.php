@@ -1,4 +1,5 @@
 <?php
+//This options page was created in reference to Lecture 9 Wordpress: Building an options page
 //Adds the option page as a sub-menu item in Appearances within the Wordpress dashboard
 function cuisine_add_submenu() {
 add_submenu_page( 'themes.php', 'Options Page', 'Theme Options', 'manage_options', 'theme_options', 'my_theme_options_page');
