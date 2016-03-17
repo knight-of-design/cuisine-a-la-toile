@@ -936,7 +936,7 @@ body,
 	box-sizing: border-box;
 	width: 100%;
 	text-align: center;
-	padding-top:40px;
+	padding-top:80px;
 	margin-bottom: 300px;
 
 }
@@ -951,8 +951,9 @@ body,
 	width: 100%;
 	vertical-align: top;
 	background-color: HSL(0,0%,97%);
-	margin-top: 40px;
 	min-height: 35vh;
+	margin-bottom: 20px;
+	margin-right: 20px;
 }
 
 #ingredients,
@@ -976,6 +977,19 @@ body,
 	max-width: 240px;
 	width: 100%;
 	vertical-align: top;
+	background-color:  HSL(60, 100%, 97%);
+	text-align: left;
+	box-sizing: border-box;
+	padding: 0 20px;
+	box-shadow: 1px 1px 5px HSL(0,0%,80%);
+
+	border-radius: 10px;
+}
+
+#secondary ul {
+	margin-left: 0;
+	padding-left: 20px;
+	list-style: none;
 }
 
 .site-footer {
