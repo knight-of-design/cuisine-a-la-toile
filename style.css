@@ -1150,9 +1150,14 @@ video#landing-background {
 /* Styles the promo */
 .promo {
 	display: block;
-	border: 1px solid HSL(0, 100%, 25%);
-	border-radius: 25px;
+	border: 5px solid HSL(0, 100%, 25%);
+	border-radius: 100px;
 	font-size: 1.3em;
+	padding: 40px;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	background-color: HSL(60, 100%, 96%);
 }
 
 /* creates a media query for screens of 1400px as learned in the responsive design lecture */
