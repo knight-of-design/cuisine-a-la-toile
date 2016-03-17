@@ -1161,6 +1161,7 @@ video#landing-background {
 	background-color: HSL(60, 100%, 96%);
 }
 
+/* Styles the grid layout */
 .grid-item, .grid-jumbo, .grid-middle {
 	display: inline-block;
 	width:100%;
@@ -1168,18 +1169,29 @@ video#landing-background {
 	text-align: left;
 }
 
-.grid-item {
-	max-width: 370px;
-}
-
 .grid-jumbo, .grid-middle {
 	max-width: 750px;
 	border-top: 1px solid HSLA(0,0%,60%,0.2);
 	border-bottom: 1px solid HSLA(0,0%,60%,0.2);
+	text-align: center;
+}
+
+.grid-jumbo {
+	padding: 30px 5px;
+}
+
+.grid-jumbo img {
+	width: 70%;
 }
 
 .grid-middle{
 	padding: 30px 15%;
+}
+
+.grid-item {
+	max-width: 280px;
+	font-size: 0.6em;
+	padding: 20px 10px;
 }
 
 
