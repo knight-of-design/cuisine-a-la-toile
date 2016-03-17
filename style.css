@@ -1205,7 +1205,9 @@ video#landing-background {
 }
 
 /*gallery page template spicific styling */
-.grid-item, .grid-jumbo, .grid-middle {
+.page-template-template-gallery .grid-item .entry-title,
+.page-template-template-gallery .grid-jumbo .entry-title,
+.page-template-template-gallery .grid-middle .entry-title{
 	font-size: 0.7em;
 }
 
