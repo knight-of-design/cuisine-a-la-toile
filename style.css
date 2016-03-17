@@ -912,6 +912,7 @@ body,
 #page{
 	min-height: 100vh;
 	height:auto;
+	background-color: HSL(45, 30%, 85%);
 }
 
 #page {
@@ -932,13 +933,21 @@ body,
 	text-align: center;
 	padding-top:40px;
 	margin-bottom: 300px;
+
 }
 
 #primary {
+	box-sizing: border-box;
+	border: 1px solid HSL(0,0%,80%);
+	box-shadow: 1px 1px 5px HSL(0,0%,80%);
+	padding:25px;
 	display: inline-block;
 	max-width: 700px;
 	width: 100%;
 	vertical-align: top;
+	background-color: HSL(0,0%,97%);
+	margin-top: 40px;
+	min-height: 35vh;
 }
 
 #secondary {
@@ -1008,9 +1017,14 @@ http://serennu.com/colour/hsltorgb.php */
 	display: inline-block;
   vertical-align: top;
 	margin-top: 50px;
-	margin-left: 50%;
+	margin-left: 55%;
 }
 
+@media screen and (min-width:1300px){
+		#primary-menu {
+			margin-left: 65%;
+		}
+}
 /* creates a hamburger menu */
 .icon-hamburger {
 	display: block;
