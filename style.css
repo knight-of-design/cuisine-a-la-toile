@@ -1147,6 +1147,13 @@ video#landing-background {
 	border-radius: 25px;
 }
 
+/* Styles the promo */
+.promo {
+	border: 1px solid HSL (0, 100%, 25%);
+	border-radius: 25px;
+	font-size: 1.3em;
+}
+
 /* creates a media query for screens of 1400px as learned in the responsive design lecture */
 @media screen and (min-width:1400px){
 	video#landing-background {
