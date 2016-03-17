@@ -1101,12 +1101,12 @@ http://serennu.com/colour/hsltorgb.php */
 }
 
 /* styles the video */
-.video-pper {
+.video-wrapper {
 	max-height: 70vh;
 	overflow: hidden;
 	margin-top: -80px;
-	position: relative;
 	margin-bottom: 40px;
+	position: relative;
 }
 
 video#landing-background {
