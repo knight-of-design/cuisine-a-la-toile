@@ -23,7 +23,9 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 <?php
-$page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$cuisine_page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+
 while ( have_posts() ) : the_post();
 
 	get_template_part( 'template-parts/content', get_post_format() );
@@ -45,9 +47,8 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	wp_reset_query();
 	$args = array(
 	'category_name' => 'subscriber-gallery',
-	'posts_per_page' => 10,
-	'paged' => $page,
-	'order' => 'DESC'
+	'posts_per_page' => 6,
+	'paged' => $cuisine_page,
 	);
 	$wp_query = new WP_Query($args);
 

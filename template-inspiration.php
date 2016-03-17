@@ -23,7 +23,7 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 <?php
-$page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$cuisine_page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 while ( have_posts() ) : the_post();
 
@@ -48,7 +48,7 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	$args = array(
 	'category_name' => 'inspiration',
 	'posts_per_page' => 1,
-	'paged' => $page,
+	'paged' => $cuisine_page,
 	'order' => 'DESC'
 	);
 	$wp_query = new WP_Query($args);
