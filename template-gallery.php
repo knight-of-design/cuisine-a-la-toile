@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Landing Page Template
- * The template file for the landing page
+ * Template Name: Gallery Page Template
+ * The template file for the gallery page
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -18,11 +18,6 @@ The video can be accessed at: https://www.flickr.com/photos/manikrathee/82966857
 This video falls under the creative commons.
   */
 get_header(); ?>
-<div class="video-wrapper">
-	<video id="landing-background" autoplay loop muted>
-		<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
-	</video>
-</div>
 
 	<div id="primary" class="content-area">
 
@@ -43,11 +38,8 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	wp_reset_query();
 	$page = get_query_var('page');
 	$args = array(
-	'post_type' => 'cuisine_recipe',
-    'meta_query' => array(array('key' => '_thumbnail_id')),
-
-	// NOTE: 'showposts' is deprecated according to WP Codex 2016
-	'posts_per_page' => 6,
+	'category_name' => 'subscriber-gallery',
+	'posts_per_page' => 10,
 	'paged' => $page,
 	'order' => 'DESC'
 	);

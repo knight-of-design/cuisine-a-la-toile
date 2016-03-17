@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Landing Page Template
- * The template file for the landing page
+ * Template Name: Inspiration Page Template
+ * The template file for the inspiration page
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -18,11 +18,6 @@ The video can be accessed at: https://www.flickr.com/photos/manikrathee/82966857
 This video falls under the creative commons.
   */
 get_header(); ?>
-<div class="video-wrapper">
-	<video id="landing-background" autoplay loop muted>
-		<source src="<?php echo get_template_directory_uri() ?>/assets/paris.mp4" type="video/mp4">
-	</video>
-</div>
 
 	<div id="primary" class="content-area">
 
@@ -43,10 +38,7 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	wp_reset_query();
 	$page = get_query_var('page');
 	$args = array(
-	'post_type' => 'cuisine_recipe',
-    'meta_query' => array(array('key' => '_thumbnail_id')),
-
-	// NOTE: 'showposts' is deprecated according to WP Codex 2016
+	'category_name' => 'inspiration',
 	'posts_per_page' => 6,
 	'paged' => $page,
 	'order' => 'DESC'
@@ -64,22 +56,48 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class($gridClass); ?>>
 
-				<?php
-
-
-				if ( has_post_thumbnail() ){ ?>
-					<div class="preview">
-                        <a href="<?php echo esc_url( get_permalink() );?>">
-						<?php the_post_thumbnail(array(500,500));
+				<header class="entry-header">
+					<?php
+					if ( is_single() ) {
 						the_title( '<h1 class="entry-title">', '</h1>' );
+					} else {
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					}
 
-						?>
-                            </a>
+					if ( 'post' === get_post_type() ) : ?>
+						<div class="entry-meta">
+							<?php cuisine_a_la_toile_posted_on(); ?>
+						</div><!-- .entry-meta -->
+						<?php
+					endif; ?>
+				</header><!-- .entry-header -->
 
-					</div>
-				<?php }
+				<div class="entry-content">
+					<?php if ( has_post_thumbnail() ){ ?>
+						<div class="entry-thumbnail">
+							<?php the_post_thumbnail(array(500,500)); ?>
+						</div>
+					<?php }
 
-				?>
+
+					the_content( sprintf(
+					/* translators: %s: Name of current post. */
+						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'cuisine-a-la-toile' ), array( 'span' => array( 'class' => array() ) ) ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					) );
+
+
+
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cuisine-a-la-toile' ),
+						'after'  => '</div>',
+					) );
+					?>
+				</div><!-- .entry-content -->
+
+				<footer class="entry-footer">
+					<?php cuisine_a_la_toile_entry_footer(); ?>
+				</footer><!-- .entry-footer -->
 
 			</article><!-- #post-## -->
 				<?php
