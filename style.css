@@ -1147,13 +1147,14 @@ video#landing-background {
 	border-radius: 25px;
 }
 
-/* Styles the promo */
+/* Styles the promo to be eye catching*/
 .promo {
 	display: block;
 	border: 5px solid HSL(0, 100%, 25%);
 	border-radius: 100px;
 	font-size: 1.3em;
 	padding: 40px;
+	box-sizing: border-box;
 	max-width: 500px;
 	margin: 0 auto;
 	margin-bottom: 40px;
