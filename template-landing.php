@@ -39,6 +39,13 @@ if (isset($options['cuisine_textarea_field']) and $options['cuisine_textarea_fie
 	<div class="promo"><?php echo $promo; ?></div>
 	<?php
 }
+
+while ( have_posts() ) : the_post();
+
+    get_template_part( 'template-parts/content', get_post_format() );
+
+endwhile; // End of the loop.
+
 	$count = 0;
 	wp_reset_query();
 	$page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
