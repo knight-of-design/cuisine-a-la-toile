@@ -83,7 +83,7 @@ get_header(); ?>
 <?php
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination( array( 'mid_size'  => 2 ) );
 
 		else :
 

@@ -93,7 +93,6 @@ get_header(); ?>
 		</article><!-- #post-## -->
 		<?php
 
-			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -101,6 +100,8 @@ get_header(); ?>
 			endif;
 
 		endwhile; // End of the loop.
+
+		the_posts_pagination( array( 'mid_size'  => 2 ) );
 		?>
 
 		</main><!-- #main -->
