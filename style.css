@@ -1149,6 +1149,7 @@ video#landing-background {
 
 /* Styles the promo */
 .promo {
+	display: block;
 	border: 1px solid HSL (0, 100%, 25%);
 	border-radius: 25px;
 	font-size: 1.3em;
