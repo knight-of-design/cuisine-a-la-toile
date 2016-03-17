@@ -1,5 +1,8 @@
 All media were accessed through the creative commons
-Gravatar created at htt://canva.ca
+Logo created at htt://canva.ca
+
+Gravatar
+https://pixabay.com/en/glasses-champagne-toast-celebration-309665/
 
 Any other media used on the site is either referenced in a comment
 or is referenced / sourced in the Wordpress media description field
